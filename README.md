@@ -1,4 +1,4 @@
-![](media/image1.PNG){width="2.813888888888889in"
+![](doc/image/Architecture.PNG){width="2.813888888888889in"
 height="1.8868055555555556in"}
 
 Author: Min Qiu, Katherine Zhao
@@ -105,7 +105,7 @@ from [here](https://powerbi.microsoft.com/en-us/landing/signin/).
         Azure SDK by following the step 1 in this instruction
         [here](https://blogs.msdn.microsoft.com/xiaoyong/2015/05/04/how-to-write-and-submit-hive-queries-using-visual-studio/)
 
--   ### **HDInsight Cluster on Linux with R Server**. 
+-   ### **HDInsight Cluster on Linux with R Server**.
 
 First, you need a HDInsight Cluster on Linux with R Server to deploy in
 order to run this demo.
@@ -122,7 +122,7 @@ order to run this demo.
 
 > The deployment of the Cluster takes about 20-40 minutes.
 
--   ### **Azure Machine Learning Workspace**. 
+-   ### **Azure Machine Learning Workspace**.
 
 You need a AML workspace pre-created.
 
@@ -156,7 +156,7 @@ You need a AML workspace pre-created.
 > ![](media/image6.png){width="5.193850612423447in"
 > height="2.6979166666666665in"}
 
-DEMO SETUP INSTRUCTIONS 
+DEMO SETUP INSTRUCTIONS
 ========================
 
 Note in the section all *instructions* are shown in blue italics.
@@ -166,7 +166,7 @@ Now we explain how to connect to the R Server edge node, install R
 Studio Server, install required packages and libraries for R, AML and
 Spark etc.
 
--   Identify the edge node of the cluster. 
+-   Identify the edge node of the cluster.
     ---------------------------------------
 
 > For an HDInsight cluster with R Server, following is the naming
@@ -336,7 +336,7 @@ height="4.551514654418198in"}
 
 Now we are ready to run the demo
 
-DEMO INSTRUCTIONS 
+DEMO INSTRUCTIONS
 ==================
 
 PowerPoint
@@ -976,7 +976,7 @@ PoweBI Online (Same for Blob and Spark)
 In this demo, we use PowerBI Online to build two dashboards based on the
 pre-build reports in PowerBI Desktop files.
 
-###  Click on “Open ‘Customer\_Churn\_Report (Blob).pbix’ in Power BI” in the above figure or 
+###  Click on “Open ‘Customer\_Churn\_Report (Blob).pbix’ in Power BI” in the above figure or
 
 go to https://powerbi.microsoft.com/ and sign in with your credentials.
 
