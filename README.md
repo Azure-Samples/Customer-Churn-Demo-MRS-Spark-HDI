@@ -1,52 +1,54 @@
-![](doc/image/Architecture.PNG){width="2.813888888888889in"
-height="1.8868055555555556in"}
+<img src=doc/image/ChurnLogo.png alt="ChurnLogo" width=200 height=125>
 
-Author: Min Qiu, Katherine Zhao
+Author:         
+
+Min Qiu, Katherine Zhao
 
 Date: May 2016
 
-Introduction
-============
+Table of Contents
+      Introduction
+      ============
 
--   **Architecture**
+      -   **Architecture**
 
--   **Prerequisites**
+      -   **Prerequisites**
 
-Demo Setup Instructions
-=======================
+      Demo Setup Instructions
+      =======================
 
-Demo Instructions
-=================
+      Demo Instructions
+      =================
 
-Demo Workthrough
-================
+      Demo Workthrough
+      ================
 
--   **Step 1: Upload sample data and reference using HADOOP**
+      -   **Step 1: Upload sample data and reference using HADOOP**
 
--   **Step 2: Create hive tables using HIVE**
+      -   **Step 2: Create hive tables using HIVE**
 
--   **Step 3: Partition sample data using HIVE **
+      -   **Step 3: Partition sample data using HIVE**
 
--   **Step 4: Feature Engineering Train data using SPARK**
+      -   **Step 4: Feature Engineering Train data using SPARK**
 
--   **Step 5: Train and Persist Model using MRS with SPARK**
+      -   **Step 5: Train and Persist Model using MRS with SPARK**
 
--   **Step 6: Feature Engineering all data using SPARK**
+      -   **Step 6: Feature Engineering all data using SPARK**
 
--   **Step 7: Score Model using MRS with SPARK**
+      -   **Step 7: Score Model using MRS with SPARK**
 
--   **Step 8: Deploy AML web service for lookup using MRS**
+      -   **Step 8: Deploy AML web service for lookup using MRS**
 
--   **Step 9: Joseph’s Mart to using AML web service**
+      -   **Step 9: Joseph’s Mart to using AML web service**
 
-Visualization
-=============
+      Visualization
+      =============
 
--   **Visualization using POWER BI desktop**
+      -   **Visualization using POWER BI desktop**
 
--   **Visualization using POWER BI online with SPARK**
+      -   **Visualization using POWER BI online with SPARK**
 
-Cleanup
+      Cleanup
 
 INTRODUCTION
 ============
@@ -65,7 +67,7 @@ prediction, and visualization.
 Architecture
 ------------
 
-![](media/image2.png){width="6.5in" height="3.6555555555555554in"}
+<img src=doc/image/Architecture.png alt="Architecture" width=750 height=400>
 
 Prerequisites
 -------------
@@ -113,6 +115,10 @@ order to run this demo.
 -   Deploy an HDInsight cluster running Linux with R Server (with
     Azure Storage) with an SSH password. You can find the instruction
     [here](https://azure.microsoft.com/en-us/documentation/articles/hdinsight-hadoop-r-server-get-started/#create-the-cluster).
+
+-   Deploy an HDInsight cluster
+    <a href="https://azuredeploy.net/" target="_blank">
+    <img src="http://azuredeploy.net/deploybutton.png"/></a>
 
 -   Follow the steps 1-9 in the “Create the Cluster” section. In Step 8,
     it’s better to put “Number of Worker nodes” to 8 and choose all
