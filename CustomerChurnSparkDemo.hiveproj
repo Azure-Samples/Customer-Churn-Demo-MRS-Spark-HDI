@@ -1,0 +1,350 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>dc43ef84-3f80-4848-93d0-dd07fa702afa</ProjectGuid>
+    <OutputType>File</OutputType>
+    <AssemblyName>Hive</AssemblyName>
+    <StartFile>Script.hql</StartFile>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <Name>CustomerChurnSparkDemo</Name>
+    <RootNamespace>CustomerChurnSparkDemo</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>false</DebugSymbols>
+    <OutputPath>bin\Release\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Script Include="hive\partition_activities.hql" />
+    <Script Include="hive\partition_users.hql" />
+    <Script Include="hive\preparedata.hql" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="doc\image" />
+    <Folder Include="hive" />
+    <Folder Include="mrs" />
+    <Folder Include="data" />
+    <Folder Include="doc" />
+    <Folder Include="Website" />
+    <Folder Include="PowerBIDesktop" />
+    <Folder Include="notebook" />
+    <Folder Include="sparkapp" />
+    <Folder Include="sparkapp\scoring" />
+    <Folder Include="sparkapp\scoring\src" />
+    <Folder Include="sparkapp\scoring\src\main" />
+    <Folder Include="sparkapp\scoring\src\main\scala" />
+    <Folder Include="sparkapp\training" />
+    <Folder Include="sparkapp\training\src" />
+    <Folder Include="sparkapp\training\src\main" />
+    <Folder Include="sparkapp\training\src\main\scala" />
+    <Folder Include="Website\views" />
+    <Folder Include="Website\public\css" />
+    <Folder Include="Website\public\fonts" />
+    <Folder Include="Website\public\img" />
+    <Folder Include="Website\public\js" />
+    <Folder Include="Website\public" />
+    <Folder Include="Website\views\layouts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="azuredeploy.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Customer Churn.pptx">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="data\Activities.csv">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="data\age.csv">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="data\region.csv">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="data\Users.csv">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Demo Instructions Customer Churn.docx">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="doc\image\Architecture.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="doc\image\CreateAML.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="doc\image\CreateHDI01.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="doc\image\CreateHDI02.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="doc\image\CreateHDI03.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="doc\image\CreateHDI04.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="doc\image\CreateHDI05.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="doc\image\CreateHDI06.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="doc\image\CreateNewAML.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="doc\image\fig_pbiapplychanges.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="doc\image\fig_pbidashboard.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="doc\image\fig_pbieditqueries.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="doc\image\fig_pbieditsource.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="doc\image\fig_pbieditsource2.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="doc\image\fig_pbiencryption.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="doc\image\fig_pbiopen.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="doc\image\fig_pbisqlauth.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="doc\image\fig_pbiwindowsauth.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="doc\image\HDInsight_VS_list.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="doc\image\HDInsight_VS_list_container.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="doc\image\HDInsight_VS_list_hive_table1.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="doc\image\HDInsight_VS_view_blob_partitiondata.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="doc\image\HDInsight_VS_view_blob_sampledata.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="doc\image\HDInsight_VS_view_hive_partitionactivity.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="doc\image\HDInsight_VS_view_hive_partitiondata_100row.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="doc\image\HDInsight_VS_view_hive_partitionuser.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="doc\image\HDInsight_VS_view_hive_praparedata.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="doc\image\img_getZip.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="doc\image\img_nodeinfo.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="doc\image\jupyter_list.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="doc\image\Login_Jupyter.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="doc\image\MLStudioID.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="doc\image\MLStudioSignIn.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="doc\image\MLStudioToken.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="doc\image\mrs_define_spark.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="doc\image\mrs_deploy_lookup_webservice.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="doc\image\mrs_scoring.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="doc\image\mrs_training.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="doc\image\PBI.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="doc\image\PBI_change_connection.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="doc\image\PBI_change_connection_query.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="doc\image\putty.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="doc\image\puttyaddress.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="doc\image\puttytunnel.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="doc\image\spark_scoring_app.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="doc\image\spark_scoring_hivetable.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="doc\image\spark_scoring_saveas_hivetable.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="doc\image\spark_training_app.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="doc\image\spark_training_dataframe1.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="doc\image\spark_training_hivetable.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="doc\image\spark_training_saveas_hivetable.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="doc\image\sshendpoint.png">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="mrs\checkWS.R">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="mrs\installrpackages.R">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="mrs\lookupWithWebService.R">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="mrs\scoring.R">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="mrs\setup.R">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="mrs\training.R">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="PowerBIDesktop\Customer_Churn_Report.pbix">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="run_demo.sh">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="setup_demo.sh">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="sparkapp\scoring\build.sbt">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="sparkapp\scoring\src\main\scala\ScoreDataFeatureEngineeringSpark.scala">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="sparkapp\training\build.sbt">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="sparkapp\training\src\main\scala\TrainDataFeatureEngineeringSpark.scala">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Website\LICENSE">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Website\package.json">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Website\public\css\bootstrap.min.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Website\public\css\bootswatch.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Website\public\css\myCSS.css">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Website\public\fonts\glyphicons-halflings-regular.eot">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Website\public\fonts\glyphicons-halflings-regular.svg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Website\public\fonts\glyphicons-halflings-regular.ttf">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Website\public\fonts\glyphicons-halflings-regular.woff">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Website\public\img\bracelet.jpg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Website\public\img\earrings.jpg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Website\public\img\heart.jpg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Website\public\img\logo.gif">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Website\public\img\progress.gif">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Website\public\img\ring.jpg">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Website\public\js\boostrap.min.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Website\public\js\customize.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Website\public\js\jquery-1.10.1.min.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Website\public\js\jquery-1.10.1.min.map">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Website\public\js\logIn.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Website\public\js\scoreClaim.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Website\public\js\startUp.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Website\server.js">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Website\views\home.handlebars">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Website\views\layouts\main.handlebars">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Website\views\test.handlebars">
+      <SubType>Content</SubType>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(AppData)\Microsoft\HDInsight Tools for Visual Studio\MsBuild\1.0\Hive.targets" />
+</Project>

@@ -1,0 +1,223 @@
+<div class="container start">
+     <div class="row">
+   	   <div class=" col-sm-3 pull-right">
+         
+          <div class="form-group">
+            <div class="col-sm-offset-3 col-sm-9">
+                
+                <div class="form-group"><!-- ACCOUNT ID -->
+                <label for="claimantID" class="control-label">Account ID</label><br/>
+                <input type="text" class="form-control input-sm" id="claimantID" placeholder="Account ID" value="A1688852564389340">
+                </div>
+
+                <div id='result' >Total Purchase: $0</div>
+                <p>&nbsp;</p>
+                <button class="btn btn-info" id="submitBtn">Purchase</button>
+                <button class="btn btn-default" id="resetBtn">Reset</button>
+                <p>&nbsp;</p>
+                <div id='resultArea' class="alert alert-success" > </div>
+                <div id="status" class="hide">Processing your order... <br/>
+                </div>
+            
+                </div>
+            </div>
+   	   </div>
+        
+
+    <div class="col-sm-9"><!-- main div -->
+        <p></p><p></p>
+ 
+    
+    <div class="panel panel-info">
+        <div class="panel-heading">
+        <h3 class="panel-title"><span class="glyphicon glyphicon-shopping-cart"></span> Your Cart</h3>
+        </div>
+        <div class="panel-body">
+
+        <table id="myTable" class="table">
+            <tbody>
+            </tbody>
+            </table>
+            
+            <button class="btn btn-info" data-toggle='modal' href='#shopMore'> 
+                <span class="glyphicon glyphicon-plus-sign"></span> Add Items</button>
+        </div>
+    </div>
+
+
+         </div> <!-- /main div -->
+    </div> <!-- /.row -->
+</div> <!-- /container -->
+    
+    <!-- BEGIN # MODAL LOGIN -->
+    <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header" align="center">
+                    <img class="img-circle" id="img_logo" src="img/logo.gif">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                    </button>
+                </div>
+
+                <!-- Begin # DIV Form -->
+                <div id="div-forms">
+
+                    <!-- Begin # Login Form -->
+                    <form id="login-form">
+                        <div class="modal-body">
+                            <div id="div-login-msg">
+                                <div id="icon-login-msg" class="glyphicon glyphicon-chevron-right"></div>
+                                <span id="text-login-msg">Type your username and password.</span>
+                            </div>
+                            <input id="login_username" class="form-control" type="text" placeholder="Username" required>
+                            <input id="login_password" class="form-control" type="password" placeholder="Password" required>
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox"> Remember me
+                                </label>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <div>
+                                <button type="submit" class="btn btn-primary btn-lg btn-block">Login</button>
+                            </div>
+                            <div>
+                                <button id="login_lost_btn" type="button" class="btn btn-link">Lost Password?</button>
+                                <button id="login_register_btn" type="button" class="btn btn-link">Register</button>
+                            </div>
+                        </div>
+                    </form>
+                    <!-- End # Login Form -->
+                    <!-- Begin | Lost Password Form -->
+                    <form id="lost-form" style="display:none;">
+                        <div class="modal-body">
+                            <div id="div-lost-msg">
+                                <div id="icon-lost-msg" class="glyphicon glyphicon-chevron-right"></div>
+                                <span id="text-lost-msg">Type your e-mail.</span>
+                            </div>
+                            <input id="lost_email" class="form-control" type="text" placeholder="E-Mail" required>
+                        </div>
+                        <div class="modal-footer">
+                            <div>
+                                <button type="submit" class="btn btn-primary btn-lg btn-block">Send</button>
+                            </div>
+                            <div>
+                                <button id="lost_login_btn" type="button" class="btn btn-link">Log In</button>
+                                <button id="lost_register_btn" type="button" class="btn btn-link">Register</button>
+                            </div>
+                        </div>
+                    </form>
+                    <!-- End | Lost Password Form -->
+                    <!-- Begin | Register Form -->
+                    <form id="register-form" style="display:none;">
+                        <div class="modal-body">
+                            <div id="div-register-msg">
+                                <div id="icon-register-msg" class="glyphicon glyphicon-chevron-right"></div>
+                                <span id="text-register-msg">Register an account.</span>
+                            </div>
+                            <input id="register_username" class="form-control" type="text" placeholder="Username" required>
+                            <input id="register_email" class="form-control" type="text" placeholder="E-Mail" required>
+                            <input id="register_password" class="form-control" type="password" placeholder="Password" required>
+                        </div>
+                        <div class="modal-footer">
+                            <div>
+                                <button type="submit" class="btn btn-primary btn-lg btn-block">Register</button>
+                            </div>
+                            <div>
+                                <button id="register_login_btn" type="button" class="btn btn-link">Log In</button>
+                                <button id="register_lost_btn" type="button" class="btn btn-link">Lost Password?</button>
+                            </div>
+                        </div>
+                    </form>
+                    <!-- End | Register Form -->
+
+                </div>
+                <!-- End # DIV Form -->
+
+            </div>
+        </div>
+    </div>
+    <!-- END # MODAL LOGIN -->
+
+    
+    <!-- SHOPPING DIALOG -->
+    <div class="modal fade" id="shopMore" tabindex="-1" role="dialog" aria-labelledby="Select Items" aria-hidden="true">
+    <div class="modal-dialog" style="width: 80%;">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+          <h1 class="modal-title" id="dlgTitle">Select Items to Purchase</h1>
+        </div>
+        <div class="modal-body" id="dlgContent">
+            <div class="container">
+                <div class="row">
+                    <!--ITEM -->                   
+                    <div class="col-xs-3">
+                        <div class="thumbnail">
+                            <img src="img/heart.jpg" alt="Sample Image">
+                            <div class="caption">
+                                <h3>Black and White Diamond Heart</h3>
+                                <p>Price: $130</p>
+                                 <button class="btn btn-info addItem" id="heart" data-dismiss="modal" aria-hidden="true">
+                                     <span class="glyphicon glyphicon-shopping-cart"></span>Add to Cart
+                                 </button>
+                            </div>
+                        </div>
+                    </div>                    
+                    <!--ITEM -->     
+                    <div class="col-xs-3">
+                        <div class="thumbnail">
+                            <img src="img/earrings.jpg" alt="Sample Image">
+                            <div class="caption">
+                                <h3>Diamond Pave Earrings</h3>
+                                <p>Price: $569</p>
+                                 <button class="btn btn-info addItem" id="earrings" data-dismiss="modal" aria-hidden="true">
+                                     <span class="glyphicon glyphicon-shopping-cart"></span>Add to Cart
+                                 </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!--ITEM -->
+                    <div class="col-xs-3">
+                        <div class="thumbnail">
+                            <img src="img/bracelet.jpg" alt="Sample Image">
+                            <div class="caption">
+                                <h3>Diamond Tennis Bracelet</h3>
+                                <p>Price: $360 </p>
+                                 <button class="btn btn-info addItem" id="bracelet" data-dismiss="modal" aria-hidden="true">
+                                     <span class="glyphicon glyphicon-shopping-cart"></span>Add to Cart
+                                 </button>
+                            </div>
+                        </div>
+                    </div>                   
+                    <!--ITEM -->                   
+                    <!--ITEM -->
+                    <div class="col-xs-3">
+                        <div class="thumbnail">
+                            <img src="img/ring.jpg" alt="Sample Image">
+                            <div class="caption">
+                                <h3>Diamond Engagement Ring</h3>
+                                <p>Price: $2100 </p>
+                                 <button class="btn btn-info addItem" id="ring" data-dismiss="modal" aria-hidden="true">
+                                     <span class="glyphicon glyphicon-shopping-cart"></span>Add to Cart
+                                 </button>
+                            </div>
+                        </div>
+                    </div>                   
+                    <!--ITEM -->                  
+                  
+                </div>
+            </div>
+            <hr>
+           
+                <div>&nbsp;</div>
+            <button type="button" class="btn btn-default" data-dismiss="modal" aria-hidden="true">Done</button>
+                
+        </div>
+      </div>
+    </div>
+    </div>
+    <!-- /SHOPPING DIALOG -->
+    
