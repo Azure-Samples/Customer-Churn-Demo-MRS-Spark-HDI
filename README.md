@@ -30,11 +30,10 @@ Prerequisites
 
 ### **Subscription requirements.** 
 
-> An Azure subscription: Before you begin, you must have an Azure
-> subscription that have access to Azure HDInsight, Azure Blob Storage,
-> etc. See Get [Azure free
-> trial](https://azure.microsoft.com/en-us/documentation/videos/get-azure-free-trial-for-testing-hadoop-in-hdinsight/) for
-> more information.
+An Azure subscription: Before you begin, you must have an Azure
+subscription that have access to Azure HDInsight, Azure Blob Storage,
+etc. See Get [Azure free trial](https://azure.microsoft.com/en-us/documentation/videos/get-azure-free-trial-for-testing-hadoop-in-hdinsight/) for
+more information.
 
 ### **PowerBI.** 
 
