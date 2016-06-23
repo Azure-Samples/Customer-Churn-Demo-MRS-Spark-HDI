@@ -28,7 +28,7 @@ Architecture
 Prerequisites
 -------------
 
--   ### **Subscription requirements.** 
+### **Subscription requirements.** 
 
 > An Azure subscription: Before you begin, you must have an Azure
 > subscription that have access to Azure HDInsight, Azure Blob Storage,
@@ -36,7 +36,7 @@ Prerequisites
 > trial](https://azure.microsoft.com/en-us/documentation/videos/get-azure-free-trial-for-testing-hadoop-in-hdinsight/) for
 > more information.
 
--   ### **PowerBI.** 
+### **PowerBI.** 
 
 You need an account for PowerBI. An account could be gotten
 from [here](https://powerbi.microsoft.com/en-us/landing/signin/).
@@ -46,9 +46,7 @@ from [here](https://powerbi.microsoft.com/en-us/landing/signin/).
 -   **Desktop:** download and install PowerBI Desktop
     [here](https://powerbi.microsoft.com/en-us/desktop/)
 
-<!-- -->
-
--   ### **Windows side requirements.**
+### **Windows side requirements.**
 
     -   A Secure Shell (SSH) client: An SSH client is used to remotely
         connect to the HDInsight cluster and run commands directly on
@@ -63,7 +61,7 @@ from [here](https://powerbi.microsoft.com/en-us/landing/signin/).
         Azure SDK by following the step 1 in this instruction
         [here](https://blogs.msdn.microsoft.com/xiaoyong/2015/05/04/how-to-write-and-submit-hive-queries-using-visual-studio/)
 
--   ### **HDInsight Cluster on Linux with R Server**.
+### **HDInsight Cluster on Linux with R Server**.
 
 First, you need a HDInsight Cluster on Linux with R Server to deploy in
 order to run this demo.
@@ -80,7 +78,7 @@ order to run this demo.
 
 > The deployment of the Cluster takes about 20-40 minutes.
 
--   ### **Azure Machine Learning Workspace**.
+### **Azure Machine Learning Workspace**.
 
 You need a AML workspace pre-created.
 
