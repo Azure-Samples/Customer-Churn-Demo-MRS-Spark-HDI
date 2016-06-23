@@ -4,7 +4,7 @@ Author:
 
 Min Qiu, Katherine Zhao
 
-Date: May 2016
+Date: June 2016
 
 INTRODUCTION
 ============
@@ -65,6 +65,13 @@ from [here](https://powerbi.microsoft.com/en-us/landing/signin/).
 First, you need a HDInsight Cluster on Linux with R Server to deploy in
 order to run this demo.
 
+you can deploy a HDInsight with Spark and R server through
+
+<a href="https://azuredeploy.net/" target="_blank">
+    <img src="http://azuredeploy.net/deploybutton.png"/>
+</a>
+
+You can also go to the azure portal deploy one like followings
 -   Deploy an HDInsight cluster running Linux with R Server (with
     Azure Storage) with an SSH password. You can find the instruction
     [here](https://azure.microsoft.com/en-us/documentation/articles/hdinsight-hadoop-r-server-get-started/#create-the-cluster).
