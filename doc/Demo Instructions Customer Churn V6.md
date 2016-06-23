@@ -27,6 +27,7 @@ Date: May 2016
 ## Cleanup
 
 # INTRODUCTION
+==================
 This demo demonstrates how to use [Microsoft R
 Server](https://azure.microsoft.com/en-us/documentation/articles/hdinsight-hadoop-r-server-install-r-studio/), [Azure
 HDInsight with R on
