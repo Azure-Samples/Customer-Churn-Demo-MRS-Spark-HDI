@@ -84,7 +84,7 @@ You need a AML workspace pre-created.
 -   Go to portal.azure.com. Choose the Machine Learning Workspace like
     below which will open the old azure portal
 
-    <img src=doc/image/CreateAML.png alt="CreateAML" width=650 height=425>
+    <img src=doc/image/CreateAML.png alt="CreateAML" width=400 height=325>
 
 -   Following the instruction
     [here](https://azure.microsoft.com/en-us/documentation/articles/machine-learning-create-workspace/)
