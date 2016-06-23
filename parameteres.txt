@@ -1,0 +1,31 @@
+R-Server.customerchurnspark03-ssh.azurehdinsight.net
+
+
+customerchurnstorage03
+
+wuQfe1nBeUzh84rhTn0fVCPHIaBMjzv1GQTU+TvaZ/rcDGyxerTOy+6mte7tHhDKPRaPmG+kZSpFOV9Wemk6XA==
+
+
+customerchurnspark03
+
+2105345
+
+1206241
+
+
+rpsarkst02
+rsparkhid03
+
+615a80e32b53433399b91a3c09464bc3
+
+db05320792ea43509fd0b67ecd19be2a
+
+CumstomerChurn_MRS_SPARK_Demo.zip
+
+mkdir $HOME/customer_churn_demo
+
+unzip CumstomerChurn_MRS_SPARK_Demo.zip –d $HOME/customer_churn_demo
+
+unzip CumstomerChurn_MRS_SPARK_Demo.zip -d customer_churn_demo
+
+cd $HOME/customer_churn_demo
