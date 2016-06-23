@@ -40,7 +40,7 @@ more information.
 You need an account for PowerBI. An account could be gotten
 from [here](https://powerbi.microsoft.com/en-us/landing/signin/).
 
--   **Online:** access PowerBI online here
+-   **Online:** access PowerBI online [here](https://powerbi.microsoft.com/)
 
 -   **Desktop:** download and install PowerBI Desktop
     [here](https://powerbi.microsoft.com/en-us/desktop/)
