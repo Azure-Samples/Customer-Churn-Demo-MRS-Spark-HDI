@@ -48,18 +48,18 @@ from [here](https://powerbi.microsoft.com/en-us/landing/signin/).
 
 ### **Windows side requirements.**
 
-    -   A Secure Shell (SSH) client: An SSH client is used to remotely
-        connect to the HDInsight cluster and run commands directly on
-        the cluster. Linux, Unix, and OS X systems provide an SSH client
-        through the SSH command. For Windows systems, we
-        recommend [PuTTY](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html).
+-   A Secure Shell (SSH) client: An SSH client is used to remotely
+    connect to the HDInsight cluster and run commands directly on
+    the cluster. Linux, Unix, and OS X systems provide an SSH client
+    through the SSH command. For Windows systems, we
+    recommend [PuTTY](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html).
 
-    -   (OPTIONAL) A SCP client: For Windows, we
-        recommend [WinSCP](https://winscp.net/eng/download.php).
+-   (OPTIONAL) A SCP client: For Windows, we
+    recommend [WinSCP](https://winscp.net/eng/download.php).
 
-    -   Visual Studio with Azure SDK. Please install Visual Studio,
-        Azure SDK by following the step 1 in this instruction
-        [here](https://blogs.msdn.microsoft.com/xiaoyong/2015/05/04/how-to-write-and-submit-hive-queries-using-visual-studio/)
+-   Visual Studio with Azure SDK. Please install Visual Studio,
+    Azure SDK by following the step 1 in this instruction
+    [here](https://blogs.msdn.microsoft.com/xiaoyong/2015/05/04/how-to-write-and-submit-hive-queries-using-visual-studio/)
 
 ### **HDInsight Cluster on Linux with R Server**.
 
@@ -76,7 +76,7 @@ order to run this demo.
 
 -   We recommend you create a new resource group for the demo.
 
-> The deployment of the Cluster takes about 20-40 minutes.
+The deployment of the Cluster takes about 20-40 minutes.
 
 ### **Azure Machine Learning Workspace**.
 
