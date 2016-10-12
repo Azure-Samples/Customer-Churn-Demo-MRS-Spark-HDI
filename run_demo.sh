@@ -196,10 +196,9 @@ localTrainingLibPath="${thisDir}/sparkapp/training/target/scala-2.10/com-adf-spa
 localScoringLibPath="${thisDir}/sparkapp/scoring/target/scala-2.10/com-adf-spark-customerchurn-scoredatafeatureengineering_2.10-1.0.jar"
 
 #upload notebook to HDI
-echo "${green}Begin upload notebooks${reset}"  | tee -a $logFile
 localNotebookPath="${thisDir}/notebook/scala"
 hdfsNotebookScalaPath="${hdfsHDIPath}/HdiNotebooks/Scala/"
-hadoop fs -put -f ${localNotebookPath}/* ${hdfsNotebookScalaPath} >> $logFile 2>&1 
+hadoop fs -put -f ${localNotebookPath}/* ${hdfsNotebookScalaPath} >> $logFile 2>&1 &
 
 #cleanup hdfs data directory
 echo "${green}Begin cleaning up hdfs data directory${reset}"  | tee -a $logFile
@@ -245,12 +244,10 @@ localDataPath2="${thisDir}/data/Users.csv"
 localDataPath3="${thisDir}/data/age.csv"
 localDataPath4="${thisDir}/data/region.csv"
 
-hadoop fs -put -f ${localDataPath3} ${hdfsSampleDataPath3} >> $logFile 2>&1 
-hadoop fs -put -f ${localDataPath4} ${hdfsSampleDataPath4} >> $logFile 2>&1 
-
 hadoop fs -put -f ${localDataPath1} ${hdfsSampleDataPath1} >> $logFile 2>&1 &
 hadoop fs -put -f ${localDataPath2} ${hdfsSampleDataPath2} >> $logFile 2>&1 &
-
+hadoop fs -put -f ${localDataPath3} ${hdfsSampleDataPath3} >> $logFile 2>&1 &
+hadoop fs -put -f ${localDataPath4} ${hdfsSampleDataPath4} >> $logFile 2>&1 &
 echo "${green}End uploading the sample data for activities and users to blob at $(date +"%Y%m%d-%H%M%S") ${reset}" | tee -a $logFile
 wait
 
@@ -332,9 +329,9 @@ wait
 hive_site="/usr/hdp/current/spark-client/conf/hive-site.xml"
 lib_hadoop_azure=`find /usr/hdp/current/hadoop-client/ -name hadoop-azure-*.jar -print`
 lib_azure_storage=`find /usr/hdp/current/hadoop-client/lib/ -name azure-storage*.jar -print`
-lib_data_jdo=`find /usr/hdp/2.*/spark/lib/ -name datanucleus-api-jdo-*.jar -print`
-lib_data_rdbms=`find /usr/hdp/2.*/spark/lib/ -name datanucleus-rdbms-*.jar -print`
-lib_data_core=`find /usr/hdp/2.*/spark/lib/ -name datanucleus-core-*.jar -print`
+lib_data_jdo=`find /usr/hdp/2.*/spark/lib/ -name datanucleus-api-jdo-*.jar -print -quit`
+lib_data_rdbms=`find /usr/hdp/2.*/spark/lib/ -name datanucleus-rdbms-*.jar -print -quit`
+lib_data_core=`find /usr/hdp/2.*/spark/lib/ -name datanucleus-core-*.jar -print -quit`
 
 echo "${green}Step 4: Begin feature engineering using spark${reset}" | tee -a $logFile
 echo "${green}Feature engineering for train data using spark${reset}" | tee -a $logFile
@@ -455,7 +452,6 @@ wait
 echo -e "\n"
 echo | tee -a $logFile
 echo "${green}End creating a lookup webservice using MRS at $(date +"%Y%m%d-%H%M%S") ${reset}" | tee -a $logFile
-echo "${green}The webservice name is userid-look-up-churn_${now} in the workspack you provided ${reset}" | tee -a $logFile
 echo "${yellow}Step 8: Create webservice using MRS completed. Now you can go to Joshph mart to run some user login"
 if [[ "$pauseflag" == "on"* ]]
 then
@@ -463,7 +459,7 @@ then
 fi
 echo
 
-#Copy the prediction result to the result container for visualization purposes. This step is to speed up the data loading in PowerBI 
+#Step 9: Copy the prediction result to the result container for visualization purposes
 echo "${green}Step 9: Begin Copying prediction result to the result container ${reset}" | tee -a $logFile
 echo | tee -a $logFile
 hdfsResultDataPath="${hdfsDataPath}/predictions/"
@@ -475,7 +471,7 @@ echo $localResultDataPath
 hadoop fs -get ${hdfsResultDataPath}/* ${localResultDataPath} >> $logFile 2>&1 
 hadoop fs -put ${localResultDataPath}/* ${hdfsResultDataPath2} >> $logFile 2>&1 
 echo | tee -a $logFile
-echo "${yellow}Copy prediction result completed. Now you can go to PowerBI to do visualization"
+echo "${yellow}Step 9: Copy prediction result completed. Now you can go to PowerBI to do visualization"
 
 now=$(date +"%Y%m%d-%H%M%S")
 echo "Demo ended at: ${now}" | tee -a $logFile
